@@ -1,0 +1,12 @@
+main: com.chup.advancedharvesterhoes.Main
+version: 1.3.0
+api-version: 1.13
+name: AdvancedHarvesterHoes
+authors:
+  - GupAChup
+  - MyApaulogies
+description: An advanced and easy method to harvesting sugarcane.
+commands:
+  harvesterhoe:
+    description: List of possible harvester hoe commands.
+    aliases: hh
