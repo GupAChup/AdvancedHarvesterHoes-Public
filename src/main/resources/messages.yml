@@ -12,11 +12,6 @@ found-drop: "&6&lRARE DROP >> &7You found a &d&lSugarcane Fragment&7!"
 found-custom-drop: "&6&lRARE DROP >> &7You found a &ePremium Key&7 and &a$1000&7!"
 invalid-level: "&cError: that is not a specified level in the config."
 reload: "&aPlugin Reloaded."
-help:
-  - "&8&l&m-------&2&lAdvancedHarvesterHoes Help&8&l&m-------"
-  - "&a/hh give [player] [amount] [level] &7Give a player the specified number of harvester hoes."
-  - "&a/hh fragment [player] &7Give a player a cane fragment."
-  - "&a/hh reload &7Reload the plugin."
 fragment:
   name: "&d&lSugarcane Fragment"
   lore:

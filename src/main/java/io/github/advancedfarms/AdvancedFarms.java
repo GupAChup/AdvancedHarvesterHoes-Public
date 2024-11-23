@@ -1,27 +1,30 @@
-package com.chup.advancedharvesterhoes;
+package io.github.advancedfarms;
 
-import com.chup.advancedharvesterhoes.configuration.ConfigManager;
-import com.chup.advancedharvesterhoes.extras.Metrics;
-import com.chup.advancedharvesterhoes.listeners.*;
+import io.github.advancedfarms.commands.CommandHook;
+import io.github.advancedfarms.config.Config;
+import io.github.advancedfarms.config.ConfigManager;
+import io.github.advancedfarms.gui.UpgradeGUI;
+import io.github.advancedfarms.listener.CaneListener;
+import io.github.advancedfarms.listener.ClickListener;
+import io.github.advancedfarms.listener.PlaceListener;
+import io.github.advancedfarms.listener.RightClickListener;
+import io.github.advancedfarms.util.Extras;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
-public class Main extends JavaPlugin {
+public class AdvancedFarms extends JavaPlugin {
 
     public static Economy econ;
-    public ConfigManager configManager;
+    public static ConfigManager configManager;
 
     @Override
     public void onEnable(){
-
-        System.out.println("AdvancedHarvesterHoes >> Plugin successfully enabled.");
-
+        Bukkit.getLogger().fine("Enabled plugin successfully.");
         if(!setupEconomy()) {
-            System.out.println("AdvancedHarvesterHoes >> Error: No economy plugin detected!");
+            Bukkit.getLogger().fine("Unable to find plugin dependency.");
         }
 
         this.configManager = new ConfigManager(this);
@@ -32,9 +35,7 @@ public class Main extends JavaPlugin {
         new UpgradeGUI(this);
         new Extras(this);
 
-        Metrics metrics = new Metrics(this, 9684);
-
-        getCommand("harvesterhoe").setExecutor(new HarvesterHoeExecutor(this));
+        getCommand("farm").setExecutor(new CommandHook(this));
         Bukkit.getPluginManager().registerEvents(new CaneListener(this), this);
         Bukkit.getPluginManager().registerEvents(new RightClickListener(this), this);
         Bukkit.getPluginManager().registerEvents(new ClickListener(this), this);

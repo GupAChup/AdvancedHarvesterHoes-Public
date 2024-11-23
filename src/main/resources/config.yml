@@ -10,10 +10,6 @@ cane-sell-price: 5
 gui-main-color: 'GREEN'
 # Set the secondary color of the upgrade GUI #
 gui-secondary-color: 'BLACK'
-# Set the custom texture of sugarcane fragments #
-# To change the texture, head over to freshcoal.com, select a head you want, and then #
-# copy and paste below only the texture's code within the quotes, from the command they provide you with #
-fragment-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1NWE3ODUxYjQ3ODYxOTJhNDFmODhkYzJkMjhkNGU5Yjc3MjNiMDZlNWNlMmY2YTQxOGJkZTYxMzI2YmMxMiJ9fX0="
 # This is the amount of cane a player needs to break each time they are paid if autosell is unlocked #
 # If your server is lagging due to frequent economy updates, you can increase this number to make payments less frequent #
 cane-before-sell: 1
