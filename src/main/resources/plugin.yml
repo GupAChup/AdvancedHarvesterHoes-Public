@@ -1,0 +1,10 @@
+name: AdvancedFarms
+version: '${project.version}'
+main: io.github.advancedfarms.AdvancedFarms
+api-version: '1.21'
+depend:
+  - NBTAPI
+
+commands:
+  farm:
+    description: List all the avaliable commands.

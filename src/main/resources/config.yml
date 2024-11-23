@@ -1,0 +1,135 @@
+# This toggles the sound played when a sugarcane is destroyed #
+sound-on-break: false
+# This toggles the "level-up" title and sound effect when a harvester hoe levels up #
+announce-on-level-up: true
+# This is the percent drop chance for fragments - (100.0 is the max and 0.0001 is the minimum) #
+fragment-drop-chance: 0.01
+# This is the price that cane should sell for when the auto sell upgrade is unlocked #
+cane-sell-price: 5
+# Set the main color of the upgrade GUI #
+gui-main-color: 'GREEN'
+# Set the secondary color of the upgrade GUI #
+gui-secondary-color: 'BLACK'
+# This is the amount of cane a player needs to break each time they are paid if autosell is unlocked #
+# If your server is lagging due to frequent economy updates, you can increase this number to make payments less frequent #
+cane-before-sell: 1
+levels:
+  # Levels can be added by simply copy and pasting the format below and changing the level number #
+  '1':
+    # How much sugarcane should be required in total to reach this level (amount displayed on counter) #
+    # Leave this setting alone for level 1 (default) *
+    next_level_break: 0
+    # Cane multiplier amount for this level *
+    # Leave this setting alone for level 1 (default) *
+    multiplier: 1.0
+  '2':
+    next_level_break: 5000
+    multiplier: 1.25
+  '3':
+    next_level_break: 25000
+    multiplier: 1.5
+  '4':
+    next_level_break: 100000
+    multiplier: 1.75
+  '5':
+    next_level_break: 500000
+    multiplier: 2.0
+  '6':
+    next_level_break: 1000000
+    multiplier: 2.25
+  '7':
+    next_level_break: 2000000
+    multiplier: 2.5
+  '8':
+    next_level_break: 3000000
+    multiplier: 2.75
+  '9':
+    next_level_break: 5000000
+    multiplier: 3.0
+  '10':
+    next_level_break: 7500000
+    multiplier: 3.25
+  '11':
+    next_level_break: 10000000
+    multiplier: 3.5
+  '12':
+    next_level_break: 125000000
+    multiplier: 3.75
+  '13':
+    next_level_break: 15000000
+    multiplier: 4.0
+upgrades:
+  autosell:
+    # Cost in money to purchase this upgrade #
+    cost_money: 1000000
+    # Cost in fragments to purchase this upgrade #
+    cost_fragments: 5
+  radius:
+    # (3x3) #
+    '1':
+      # Cost in money to purchase this upgrade #
+      cost_money: 1500000
+      # Cost in fragments to purchase this upgrade #
+      cost_fragments: 10
+    # (5x5) #
+    '2':
+      cost_money: 3000000
+      cost_fragments: 15
+  fragment_multiplier:
+    '1':
+      # Cost in money to purchase this upgrade #
+      cost_money: 1000000
+      # Cost in fragments to purchase this upgrade #
+      cost_fragments: 1
+      # Multiplier that will be multiplied with the fragment-drop-chance specified above - This number can range from 1.01 (1% boost) to 100.0 (10,000% boost) #
+      fragment_multiplier: 1.25
+    '2':
+      cost_money: 2000000
+      cost_fragments: 2
+      fragment_multiplier: 2.50
+    '3':
+      cost_money: 3000000
+      cost_fragments: 3
+      fragment_multiplier: 5.0
+    '4':
+      cost_money: 4000000
+      cost_fragments: 4
+      fragment_multiplier: 8.50
+    '5':
+      cost_money: 5000000
+      cost_fragments: 5
+      fragment_multiplier: 12.50
+  # With this upgrade, you have the ability to add a custom buff that runs a command a certain percentage of the time, for example giving a crate key or money #
+  # All names and lore for this upgrade can be edited in the messages.yml file #
+  custom:
+    # If this custom upgrade is enabled or not #
+    enabled: false
+    # The default percentage chance to run the commands - (100.0 is the max and 0.0001 is the minimum) #
+    default_percentage: 0.01
+    # A list of all the commands that will be run when this ability activates #
+    commands:
+      - "cc give physical premium 1 {player}"
+      - "eco give {player} 1000"
+    '1':
+      # Cost in money to purchase this upgrade #
+      cost_money: 100000
+      # Cost in fragments to purchase this upgrade #
+      cost_fragments: 1
+      # Multiplier that will be multiplied with the default_percentage specified above - This number can range from 1.01 (1% boost) to 100.0 (10,000% boost) #
+      percentage_multiplier: 1.25
+    '2':
+      cost_money: 200000
+      cost_fragments: 2
+      percentage_multiplier: 1.50
+    '3':
+      cost_money: 300000
+      cost_fragments: 3
+      percentage_multiplier: 1.75
+    '4':
+      cost_money: 400000
+      cost_fragments: 4
+      percentage_multiplier: 2.25
+    '5':
+      cost_money: 500000
+      cost_fragments: 5
+      percentage_multiplier: 3.0
